@@ -14,7 +14,7 @@
  This page has got few special features made using Javascript. They are scroll to top, a popup, moving to sections when clicked on navbar, navbar active class.
 
 ## ScrollTop 
- A button is provided once a user scrolls down which once pressed takes you to the top. The functionality of button was made using 2 functions scrollFuntiocn() and topFunction.
+ A button is provided once a user scrolls down which once pressed takes you to the top. The functionality of button was made using 2 functions scrollFunction() and topFunction.
 
 ## Popup
  A message gets popped up once the heading of the the page is clicked. This is a simple function which is shown by using toggle().
