@@ -36,12 +36,12 @@ const navElements = document.querySelectorAll('section');
 
 const navlist = document.createDocumentFragment();
 
-for(section of navElements) {
+navElements.forEach(section => {
     const listElement = document.createElement('li');
-    listElement.innerHTML = `<a href="#${section.id}" class="menu__link">${section.dataset.nav}</a>`;
-    
+    listElement.className= "menu__link"
+    listElement.innerHTML = `<a href="#${section.id}" class="">${section.dataset.nav}</a>`;
     navlist.appendChild(listElement);
-}
+})
 navbar.appendChild(navlist);
 
 /**
@@ -103,14 +103,11 @@ function scrollTo() {
   */
  const callback = enteries => {
   enteries.forEach(entry => {
-    const navListElement = document.querySelector(`.menu__link`)
     const section = document.getElementById(entry.target.id)
     if (entry && entry.isIntersecting) {
-      navListElement.classList.add('active')
       section.classList.add('your-active-class')
     } else if
-       (navListElement.classList.contains('active')) {
-        navListElement.classList.remove('active')
+       (section.classList.contains('your-active-class')) {
         section.classList.remove('your-active-class')
     }
   })
