@@ -138,7 +138,7 @@ function scrollTo() {
   * 
   */ 
  const observer = new IntersectionObserver(callback, options)
- navElements.forEach(el => {
-  observer.observe(document.getElementById(el.id))
+ navElements.forEach(section => {
+  observer.observe(document.getElementById(section.id))
  })
  
