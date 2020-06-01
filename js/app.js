@@ -103,7 +103,7 @@ function scrollTo() {
   */
  const callback = enteries => {
   enteries.forEach(entry => {
-    const navListElement = document.querySelector(`.menu__link`)
+    const navListElement = document.querySelectorAll(`a[href="#${entry.target.id}"]`)[0]
     const section = document.getElementById(entry.target.id)
     if (entry && entry.isIntersecting) {
       navListElement.classList.add('active')
