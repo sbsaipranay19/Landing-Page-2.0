@@ -98,6 +98,12 @@ section {
     color: #333;
 }
 
+.active{
+    color: #333 !important;
+    background: #fff;
+    padding: 18px;
+}
+
 /* Header Styles */
 .page__header {
     background: #fff;
