@@ -103,11 +103,14 @@ function scrollTo() {
   */
  const callback = enteries => {
   enteries.forEach(entry => {
+    const navListElement = document.querySelector(`.menu__link`)
     const section = document.getElementById(entry.target.id)
     if (entry && entry.isIntersecting) {
+      navListElement.classList.add('active')
       section.classList.add('your-active-class')
     } else if
-       (section.classList.contains('your-active-class')) {
+       (navListElement.classList.contains('active')) {
+        navListElement.classList.remove('active')
         section.classList.remove('your-active-class')
     }
   })
